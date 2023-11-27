@@ -62,3 +62,5 @@ export const removeData = async (key: string) => {
         console.error('Error removing data:', error);
     }
 };
+
+export const RAPID_API_KEY=''

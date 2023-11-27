@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { JobResponseModel } from '../models/JobResponseModel'
 import { EstimatedSalaryDataExample, JobDetailData, SearchData } from '../utils/data'
+import { RAPID_API_KEY } from '../utils'
 
 interface QueryModel {
     query?: string | string[],
@@ -23,7 +24,7 @@ const useFetch = (endpoint: string, query: QueryModel) => {
         method: 'GET',
         url: `https://jsearch.p.rapidapi.com/${endpoint}`,
         headers: {
-            // 'X-RapidAPI-Key': 'aa85b7cd97msh7add43a6904eddep154c6djsn2653315b39a0',
+            'X-RapidAPI-Key': RAPID_API_KEY,
             'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
         },
         params: { ...query, page: '1' },

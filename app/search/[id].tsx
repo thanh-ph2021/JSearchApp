@@ -9,8 +9,7 @@ import NearbyJobCard from '../../components/NearbyJobCard';
 import axios from 'axios';
 import { JobResponseModel } from '../../models/JobResponseModel';
 import { SearchData } from '../../utils/data';
-
-
+import { RAPID_API_KEY } from '../../utils';
 
 const SearchScreen = () => {
 
@@ -29,7 +28,7 @@ const SearchScreen = () => {
       method: 'GET',
       url: `https://jsearch.p.rapidapi.com/search`,
       headers: {
-        // 'X-RapidAPI-Key': '813af22005msh81cd639b88520abp1d4922jsna6e8dd4f2322',
+        'X-RapidAPI-Key': RAPID_API_KEY,
         'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
       },
       params: query ?? { query: params.id, page: page },
