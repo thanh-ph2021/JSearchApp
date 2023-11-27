@@ -1,4 +1,4 @@
-# React native Expo JSearch App
+# React Native Expo JSearch App
 
 ![Demo](./assets/images/demo-02.png)
 
